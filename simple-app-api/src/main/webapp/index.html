@@ -125,7 +125,8 @@ SOFTWARE.
                             <ul class="nav navbar-nav" ng-if="logged">
                                <li if-permission name='branch'><a ui-sref="branchList({page: 1, limit: 15})">Branch</a></li>
                                 <li if-permission name='product'><a ui-sref="productList({page: 1, limit: 15})">Product</a></li>
-                               <li if-permission name='category'><a ui-sref="categoryList({page: 1, limit: 15})">Category</a></li> 
+                               <li if-permission name='category'><a ui-sref="categoryList({page: 1, limit: 15})">Category</a></li>
+                               
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <login-button></login-button>

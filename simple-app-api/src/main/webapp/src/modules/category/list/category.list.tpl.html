@@ -30,7 +30,7 @@ SOFTWARE.
     
     <ul> <li ng-repeat="(key,value) in catTable" ng-mouseover="options=true;" ><div id="toolB">{{key}}</div>
             <ul id="content-b" ng-show="options" ng-mouseleave="options=false">
-                <li ng-click="sentP(value)">{{value.name}}</li></ul>
+                <li ng-repeat="item in value" ng-click="sentP(item)">{{item.name}}</li></ul>
         </li>
         
     </ul>

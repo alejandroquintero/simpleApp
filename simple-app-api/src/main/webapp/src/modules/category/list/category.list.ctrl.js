@@ -34,13 +34,18 @@ SOFTWARE.
               $scope.records.forEach(function(r){
                    
                 if(r.parentCategory !== undefined){
-                    $scope.records.forEach(function(re){
+                    $scope.records.forEach(function(re,index){
+                        console.log(index);
                 if(re.parentCategory === undefined){
                      
                    if(re.name === r.parentCategory.name){
-                       $scope.catTable[re.name]={};
-                       $scope.catTable[re.name]={"name":r.name,"id":r.id};
-                       
+                       if($scope.catTable[re.name]){
+                       $scope.catTable[re.name].push({"name":r.name,"id":r.id});
+                   }
+                       else{
+                           $scope.catTable[re.name]=[];
+                           $scope.catTable[re.name].push({"name":r.name,"id":r.id});
+                       }
                    }   
                 }
             });

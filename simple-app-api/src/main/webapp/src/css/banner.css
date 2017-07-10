@@ -9,9 +9,9 @@ and open the template in the editor.
 */
 #banner{
     background-image:url("banner.png");
-    background-color: rgb(109,83,50);
-    
+    background-position: center; 
+    background-repeat: no-repeat;
     position:relative;
-    height:100px;
-    weight:100px;   
+    height:500px;
+    width:1200px;   
 }
